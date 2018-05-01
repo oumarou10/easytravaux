@@ -6,6 +6,7 @@ use App\Contact;
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMessageCreated;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -17,7 +18,14 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        $mailable = new ContactMessageCreated($request->name, $request->telephone, $request->email, $request->message);
+        $message = new Contact();
+        $message->name = $request->name;
+        $message->telephone = $request->telephone;
+        $message->email = $request->email;
+        $message->message = $request->message;
+        $message->save();
+
+        $mailable = new ContactMessageCreated($message);
         Mail::to('nibonx75@yahoo.fr')->send($mailable);
         flashy('Votre message a bien été envoyé');
         return redirect()->route('home');
