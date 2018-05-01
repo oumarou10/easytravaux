@@ -11,9 +11,9 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="{{ route('home') }}" style="color: white">Home</a></li>
-        <li ><a href="{{ route('devis') }}" style="color: white">Devis</a></li>
-        <li><a href="{{ route('contact') }}" style="color: white">Contact</a></li>
+        <li class="{{set_active_route('home')}}"><a href="{{ route('home') }}" style="color: white">Home</a></li>
+        <li class="{{set_active_route('devis')}}"><a href="{{ route('devis') }}" style="color: white">Devis</a></li>
+        <li class="{{set_active_route('contact')}}"><a href="{{ route('contact') }}" style="color: white">Contact</a></li>
       </ul>
     </div>
   </div>
