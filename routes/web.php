@@ -20,3 +20,5 @@ Route::get('',                   ['as' => 'home',            'uses' => 'IndexCon
 Route::get('/devis',             ['as' => 'devis',           'uses' => 'DevisController@index']);
 
 Route::get('/contact',           ['as' => 'contact',         'uses' => 'ContactController@index']);
+
+Route::post('/contact',          ['as' => 'contact',         'uses' => 'ContactController@store']);
