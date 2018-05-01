@@ -1,43 +1,44 @@
-@extends('layout.default')
+@extends('layout.default', ['title' => 'Contact'])
 
 @section('content')
-    <div class="container" style="background-color: #DEDED3">
+    <div id="container_contact" class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
 
-        <h1 style="text-align: center"> Contact </h1>
+                <h1 id="form_content"> Contact </h1>
+                 <form id="form" action="#" method="post">
 
-        <div style="text-align: center">
-            <h4>Amady Coulibaly</h4>
-            <p>121 avenue Lenine 93390</p>
-            <p>Téléphone : 07 58 06 90 48</p>
-            <p>Email de contact : amadicoulibaly67@gmail.com</p>
+                   <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                    <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
+                        <label for="name" class="control-label">Nom*</label>
+                        <input type="text" class="form-control" id="title" name="name" placeholder="Entrez votre nom">
+                        <span class="label label-danger">{{ $errors->first('name') }}</span>
+                    </div>
+
+                     <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
+                        <label for="telephone" class="control-label">Numéro de téléphone*</label>
+                        <input type="text" class="form-control" id="email" name="description" placeholder="Entrez votre numéro de téléphone">
+                        <span class="label label-danger">{{ $errors->first('telephone') }}</span>
+                     </div>
+
+                     <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
+                        <label for="email" class="control-label">Adresse email*</label>
+                        <input type="text" class="form-control" id="email" name="description" placeholder="Entrez votre nom">
+                        <span class="label label-danger">{{ $errors->first('email') }}</span>
+                      </div>
+
+                     <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                        <label for="message" class="control-label">Message </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                        <span class="label label-danger">{{ $errors->First('message') }}</span>
+                      </div>
+
+                      <button id="upload-button" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+                </form>
+
+            </div>
         </div>
-
-        <form id="Form" method="post" enctype="multipart/form-data">
-
-           <input type="hidden" name="_token" value="{{ csrf_token() }}">
-
-          <div class="form-group {{ $errors->has('title') ? 'has-error' : ''}}">
-            <label for="title" class="control-label">Prenom </label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Entrez votre prenom">
-            <span class="label label-danger">{{ $errors->first('title') }}</span>
-          </div>
-
-          <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
-            <label for="description" class="control-label">Nom </label>
-            <input type="text" class="form-control" id="description" name="description" placeholder="Entrez votre nom">
-              <span class="label label-danger">{{ $errors->first('description') }}</span>
-          </div>
-
-          <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-            <label for="name" class="control-label">Message </label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-            <span class="label label-danger">{{ $errors->First('name') }}</span>
-          </div>
-
-          <button id="upload-button" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-        </form>
-
-        <div id="results"></div>
 
     </div>
 
