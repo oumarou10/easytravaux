@@ -18,12 +18,7 @@ class ContactController extends Controller
 
     public function store(ContactRequest $request)
     {
-        $message = new Contact();
-        $message->name = $request->name;
-        $message->telephone = $request->telephone;
-        $message->email = $request->email;
-        $message->message = $request->message;
-        $message->save();
+        $message = Contact::create($request->only('name', 'telephone', 'email', 'message'));
 
         $mailable = new ContactMessageCreated($message);
         Mail::to('nibonx75@yahoo.fr')->send($mailable);
