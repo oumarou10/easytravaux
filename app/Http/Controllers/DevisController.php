@@ -11,4 +11,9 @@ class DevisController extends Controller
         $prestations = ['peinture', 'renovation sol', 'renovation salle de bain'];
         return view ('devis.form', ['prestations' => $prestations]);
     }
+
+    public function store()
+    {
+        dd('die');
+    }
 }
