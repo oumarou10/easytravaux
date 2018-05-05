@@ -11,11 +11,10 @@
 |
 */
 
-Route::get('/welcome', function () {
-    return view('welcome');
-});
 
 Route::get('',                   ['as' => 'home',            'uses' => 'IndexController@index']);
+
+Route::get('/about',             ['as' => 'about',           'uses' => 'AboutController@index']);
 
 Route::get('/devis',             ['as' => 'devis',           'uses' => 'DevisController@index']);
 
