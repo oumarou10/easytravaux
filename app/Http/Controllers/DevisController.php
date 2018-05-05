@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\DevisRequest;
 use Illuminate\Http\Request;
 
 class DevisController extends Controller
@@ -12,8 +13,8 @@ class DevisController extends Controller
         return view ('devis.form', ['prestations' => $prestations]);
     }
 
-    public function store()
+    public function store(DevisRequest $request)
     {
-        dd('die');
+        dd($request);
     }
 }
