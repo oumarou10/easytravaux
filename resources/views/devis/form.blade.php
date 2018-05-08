@@ -8,13 +8,17 @@
                 <h1> Devis </h1>
             </div>
         </div>
-
         <hr class="style3">
 
         <div class="row">
             <div class="col-md-6 col-md-offset-2">
                 <h3> Besoin d'un devis </h3>
-                <p>Une question ? Appelez-moi au : 07 58 06 90 48 ou envoyez-nous un message ci-dessous.</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <p>Besoin d'un devis ? Réalisez-le facilement et gratuitement depuis notre plateforme.</p>
 
                 <form id="Form" action="{{ route('devis') }}" method="post">
 
@@ -51,10 +55,8 @@
                         <span class="label label-danger">{{ $errors->First('name') }}</span>
                     </div>
                     <h5 class="lowercased text text-right">*champs obligatoires</h5>
-
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Envoyez</button>
                 </form>
-
             </div>
 
             <div class="adresse col-md-4">
