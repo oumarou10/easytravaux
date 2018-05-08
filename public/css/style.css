@@ -1,18 +1,42 @@
-#header_img {
-    background-color: white;
+/******************************** GLOBAL ********************************/
+
+html {
+    height: 100%;
 }
 
 body {
-    background-color: white;
+    background-color: ghostwhite;
+    height:100%;
+    margin: 0;
+    padding: 0;
 }
+
+.global {
+    min-height: 100%;
+    position: relative;
+}
+
+/******************************** HEADER ********************************/
+
+#header_img {
+    background-color: ghostwhite;
+}
+
+
+.navbar {
+    background-color: #C5C8C8;
+}
+
+.navbar .nav > li > a {
+    color: #0b2e13;
+}
+
+/******************************** BODY ********************************/
 
 .style3 {
 	border-top: 1px dotted #8c8b8b;
 }
 
-.navbar {
-    background-color: #C5C8C8;
-}
 
 h1 {
     font-family: Arial, sans-serif;
@@ -23,21 +47,17 @@ h3 {
     padding: 0 0 15px 0;
 }
 
-h1:hover {
-    color: red;
-    text-decoration: underline;
-}
-
-.navbar .nav > li > a {
-    color: #0b2e13;
-}
-
 .adresse {
     font-size: large;
 }
 
+/******************************** FOOTER ********************************/
+
 footer {
-   background-color: #C5C8C8;
-    position:relative;
-    bottom:0px;
+  background-color: #C5C8C8;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
 }
