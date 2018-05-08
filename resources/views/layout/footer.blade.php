@@ -1,5 +1,4 @@
 <footer>
-
-  <p class="text-center text-md-left grey-text">© 2018 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"><strong> MDBootstrap.com</strong></a></p>
-
+    <p class="text-center text-md-left grey-text">© Copyright 2018. Tous Droits Réservés.
+    <a href="{{ route('contact') }}">Contactez-nous</a></p>
 </footer>
