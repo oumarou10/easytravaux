@@ -10,10 +10,11 @@
   </head>
 
   <body>
-    @include('flashy::message')
-    @include('layout._nav')
-    @yield('content')
-    <script src="//code.jquery.com/jquery.js"></script>
-    @include('layout.footer')
+      @include('layout.img')
+      @include('layout._nav')
+      @include('flashy::message')
+      @yield('content')
+      <script src="//code.jquery.com/jquery.js"></script>
+      @include('layout.footer')
   </body>
 </html>
