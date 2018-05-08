@@ -27,7 +27,7 @@
                     </div>
 
                      <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
-                        <label for="telephone" class="control-label">Numéro de téléphone</label>#343837
+                        <label for="telephone" class="control-label">Numéro de téléphone</label>
                         <input type="text" class="form-control" id="email" name="telephone" value="{{ old('telephone')}}" placeholder="Entrez votre numéro de téléphone">
                         <span class="label label-danger">{{ $errors->first('telephone') }}</span>
                      </div>
