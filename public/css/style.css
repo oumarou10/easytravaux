@@ -1,0 +1,43 @@
+#header_img {
+    background-color: white;
+}
+
+body {
+    background-color: white;
+}
+
+.style3 {
+	border-top: 1px dotted #8c8b8b;
+}
+
+.navbar {
+    background-color: #C5C8C8;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    padding: 5px 0 23px 0;
+}
+
+h3 {
+    padding: 0 0 15px 0;
+}
+
+h1:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.navbar .nav > li > a {
+    color: #0b2e13;
+}
+
+.adresse {
+    font-size: large;
+}
+
+footer {
+   background-color: #C5C8C8;
+    position:relative;
+    bottom:0px;
+}
