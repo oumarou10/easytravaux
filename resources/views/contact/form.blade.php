@@ -2,16 +2,18 @@
 
 @section('content')
     <div class="container">
-        <div class="row"">
 
-            <h1> Contact </h1>
-
-            <hr class="style3">
-
+        <div class="row">
             <div class="col-md-6 col-md-offset-1">
+                <h1> Contact </h1>
+            </div>
+        </div>
 
+        <hr class="style3">
+
+        <div class="row">
+            <div class="col-md-6 col-md-offset-2">
                 <h3> Nous écrire </h3>
-
                 <p>Une question ? Appelez-moi au : 07 58 06 90 48 ou envoyez-nous un message ci-dessous.</p>
 
                  <form id="form" action="{{ route('contact') }}" method="post">
@@ -49,16 +51,10 @@
 
             </div>
 
-            <div class="adresse col-md-4 col-md-offset-1">
-
+            <div class="adresse col-md-4">
                <h3> Adresse </h3>
-
                 <p> 112, avenue lénine <br> 93380 Pierrefitte-sur-Seine</p>
-
-                <p><a href="mailto:amadicoulibaly67@gmail.com">amadicoulibaly67@gmail.com</a><br>Tél : 07 58 06 90 48
-                </p>
-
-
+                <p><a href="mailto:amadicoulibaly67@gmail.com">amadicoulibaly67@gmail.com</a><br>Tél : 07 58 06 90 48</p>
             </div>
         </div>
 
