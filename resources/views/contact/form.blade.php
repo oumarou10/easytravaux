@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="row" style="background-color: ">
+        <div class="row"">
 
             <h1> Contact </h1>
 

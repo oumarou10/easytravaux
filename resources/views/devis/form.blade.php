@@ -1,8 +1,8 @@
-@extends('layout.default', ['title' => 'Contact'])
+@extends('layout.default', ['title' => 'Devis'])
 
 @section('content')
     <div class="container">
-        <div class="row" style="background-color: ">
+        <div class="row"">
 
             <h1> Devis </h1>
             <hr class="style3">
