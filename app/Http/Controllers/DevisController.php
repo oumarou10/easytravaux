@@ -9,8 +9,15 @@ class DevisController extends Controller
 {
     public function index()
     {
-        $prestations = ['peinture', 'renovation sol', 'renovation salle de bain'];
-        return view ('devis.form', ['prestations' => $prestations]);
+        $items = ['Appartement', 'Cuisine', 'Salle de Bain', 'Salon', 'Autres'];
+
+        $prestations = [
+            'Electricité', 'Fenêtres', 'Peinture',
+            'Rénovation sol', 'Rénovation salle de bain',
+            'Toutes types de rénovations sol - mur','Autres'
+        ];
+
+        return view ('devis.form', compact('prestations','items'));
     }
 
     public function store(DevisRequest $request)

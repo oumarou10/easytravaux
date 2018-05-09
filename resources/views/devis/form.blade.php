@@ -25,10 +25,10 @@
                     {{ csrf_field() }}
 
                     <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
-                        <label for="type-appartement" class="control-label">Type d'habitation: </label> <br>
-                        <input type='radio' class="form-control" name='type-appartement' value='Option One'> Appartement
-                        <input type='radio' class="form-control" name='type-appartement' value='Option Two'> Maison individuelle <br>
-                        <span class="label label-danger">{{ $errors->first('type-appartement') }}</span>
+                        <label for="surface" class="control-label">Type d'appartement: </label> <br>
+                        <label class="radio-inline"><input type="radio" name="type_appartement">Maison</label>
+                        <label class="radio-inline"><input type="radio" name="type_appartement">Appartement</label>
+                        <span class="label label-danger">{{ $errors->first('type_appartement') }}</span>
                     </div>
 
                     <div class="form-group {{ $errors->has('code_postal') ? 'has-error' : ''}}">
@@ -38,14 +38,12 @@
                     </div>
 
                     <div class="form-group {{ $errors->has('prestations') ? 'has-error' : ''}}">
-                        <label for="name" class="control-label">Type de travaux: </label> <br>
-                            <input type='checkbox' name='prestations[]' value='Option One'> Fenetres
-                            <input type='checkbox' name='prestations[]' value='Option two'> Electricité
-                            <input type='checkbox' name="prestations[]" value='Option three'> Rénovation salle de bain<br>
-                            <input type='checkbox' name='prestations[]' value='Option four'> Rénovation cuisine <br>
-                            <input type='checkbox' name='prestations[]' value='Option five'> Peinture <br>
-                            <input type="checkbox" name='prestations[]' value='Option six'> Toutes types de rénovations sol - murs <br>
-                            <input type="checkbox" name='prestations[]' value='Option seven'> Autres
+                        <label for="surface" class="control-label">Type de travaux:</label> <br>
+                        <select class="control-label" name="prestations">
+                             @foreach($prestations as $prestation)
+                                <option value="{{$prestation}}">{{$prestation}}</option>
+                            @endforeach
+                        </select>
                         <span class="label label-danger">{{ $errors->First('prestations') }}</span>
                     </div>
 
