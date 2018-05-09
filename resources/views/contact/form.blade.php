@@ -17,7 +17,7 @@
 
         <div class="row">
             <div class="col-md-6 col-md-offset-2">
-                <p>Une question ? Appelez-moi au : 07 58 06 90 48 ou envoyez-nous un message ci-dessous.</p>
+                <p>Une question ? Appelez-moi au : 07 58 06 90 48 ou envoyez-moi un message ci-dessous.</p>
 
                  <form id="form" action="{{ route('contact') }}" method="post">
 
