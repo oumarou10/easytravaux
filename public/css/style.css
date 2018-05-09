@@ -35,13 +35,18 @@ body {
 }
 
 nav a:hover {
-    background-color: black;
+    text-transform: uppercase;
 }
 
 /******************************** BODY ********************************/
 
 .style3 {
 	border-top: 1px dotted #8c8b8b;
+}
+
+.head_title {
+    margin: -15px 20px -22px 20px;
+    padding: 2px 20px 2px 20px;
 }
 
 h1 {
@@ -51,6 +56,10 @@ h1 {
 
 h3 {
     padding: 0 0 15px 0;
+}
+
+.button {
+    margin-bottom: 150px
 }
 
 /******************************** FOOTER ********************************/
