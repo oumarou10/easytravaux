@@ -2,8 +2,7 @@
 
 @section('content')
     <div class="container">
-
-        <div class="row">
+        <div class="head_title row">
             <div class="col-md-6 col-md-offset-1">
                 <h1> Contact </h1>
             </div>
@@ -48,9 +47,11 @@
                         <span class="label label-danger">{{ $errors->First('message') }}</span>
                      </div>
 
-                     <h5 class="lowercased text text-right">*champs obligatoires</h5>
+                     <div class="button">
+                         <h5 class="lowercased text text-right">*champs obligatoires</h5>
+                         <button id="upload-button" type="submit" class="btn btn-primary btn-lg btn-block">Envoyer</button>
+                     </div>
 
-                     <button id="upload-button" type="submit" class="btn btn-primary btn-lg btn-block">Envoyer</button>
                 </form>
 
             </div>

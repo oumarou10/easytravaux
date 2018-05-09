@@ -2,8 +2,7 @@
 
 @section('content')
     <div class="container">
-
-        <div class="row">
+        <div class="head_title row">
             <div class="col-md-6 col-md-offset-1">
                 <h1> Devis </h1>
             </div>
@@ -24,7 +23,7 @@
 
                     {{ csrf_field() }}
 
-                    <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                    <div class="form-group {{ $errors->has('type_appartement') ? 'has-error' : ''}}">
                         <label for="surface" class="control-label">Type d'appartement: </label> <br>
                         <label class="radio-inline"><input type="radio" name="type_appartement">Maison</label>
                         <label class="radio-inline"><input type="radio" name="type_appartement">Appartement</label>
@@ -44,16 +43,20 @@
                                 <option value="{{$prestation}}">{{$prestation}}</option>
                             @endforeach
                         </select>
-                        <span class="label label-danger">{{ $errors->First('prestations') }}</span>
+                        <span class="label label-danger">{{ $errors->first('prestations') }}</span>
                     </div>
 
-                    <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                    <div class="form-group {{ $errors->has('surface') ? 'has-error' : ''}}">
                         <label for="surface" class="control-label">Surface en m2: </label> <br>
                         <input type='number' min="5" class="form-control" name='surface' value='Option One'>
-                        <span class="label label-danger">{{ $errors->First('name') }}</span>
+                        <span class="label label-danger">{{ $errors->first('surface') }}</span>
                     </div>
-                    <h5 class="lowercased text text-right">*champs obligatoires</h5>
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">Envoyez</button>
+
+                    <div class="button">
+                        <h5 class="lowercased text text-right">*champs obligatoires</h5>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Envoyez</button>
+                    </div>
+
                 </form>
             </div>
 
