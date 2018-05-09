@@ -24,12 +24,10 @@ class DevisRequest extends FormRequest
     public function rules()
     {
         return [
-            'code_postal'      => 'required',
+            'code_postal'      => 'required|numeric',
             'type_appartement' => 'required',
-            'nombre_pieces'    => 'required|min:2',
             'prestations'      => 'required',
-            'message'          => 'required',
-            'surface'          => 'required|min:6'
+            'surface'          => 'required'
         ];
     }
 }
