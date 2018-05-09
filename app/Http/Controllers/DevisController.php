@@ -12,7 +12,7 @@ class DevisController extends Controller
         $items = ['Appartement', 'Cuisine', 'Salle de Bain', 'Salon', 'Autres'];
 
         $prestations = [
-            'Electricité', 'Fenêtres', 'Peinture',
+            'Electricité', 'Fenêtres', 'Travaux de peinture',
             'Rénovation sol', 'Rénovation salle de bain',
             'Toutes types de rénovations sol - mur','Autres'
         ];
@@ -22,6 +22,6 @@ class DevisController extends Controller
 
     public function store(DevisRequest $request)
     {
-        dd($request);
+        die($request);
     }
 }
