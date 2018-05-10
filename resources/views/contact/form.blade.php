@@ -41,10 +41,10 @@
                         <span class="label label-danger">{{ $errors->first('email') }}</span>
                      </div>
 
-                     <div class="form-group {{ $errors->has('name') ? 'has-error' : ''}}">
+                     <div class="form-group {{ $errors->has('message') ? 'has-error' : ''}}">
                         <label for="message" class="control-label">Message </label>
                         <textarea class="form-control" name="message" rows="4"></textarea>
-                        <span class="label label-danger">{{ $errors->First('message') }}</span>
+                        <span class="label label-danger">{{ $errors->first('message') }}</span>
                      </div>
 
                      <div class="button">
