@@ -1,26 +1,49 @@
 @extends('layout.default', ['title' => 'Bienvenue'])
 @section('content')
 
-<div class="container">
-    <div class="head_title row">
-         <div class="col-md-6 col-md-offset-1">
-            <h1> Bienvenue </h1>
-         </div>
+<section id="welcome" class="container-fluid">
+    <div class="heading">
+        <h1>Bienvenue sur travaux facile</h1>
+        <h3>Des envies de travaux ? Un devis rapide et gratuit ? <span class="glyphicon glyphicon-chevron-down"></span></h3>
+        <a href="{{ route('devis') }}" class="button1">Devis</a>
     </div>
-    <hr class="style3">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-2">
-            <h3> Lorem Ipsum </h3>
-            <p>Lorem ipsum ipsum </p>
-        </div>
+</section>
 
-        <div class="adresse col-md-4">
-            <h3> Votre titre </h3>
-            <p> 112, avenue lénine <br> 93380 Pierrefitte-sur-Seine</p>
-            <p><a href="mailto:amadicoulibaly67@gmail.com">amadicoulibaly67@gmail.com</a><br>Tél : 07 58 06 90 48</p>
+<section id="recommandations">
+    <div class="container">
+        <div class="red-divider"></div>
+        <div class="heading">
+            <h2>Recommandations</h2>
+        </div>
+        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <h3>"Un travail rapide, efficace et un prix attractif..."</h3>
+                    <h4>Maryse Lemoigne</h4>
+                </div>
+                <div class="item">
+                    <h3>"Je suis très satisfait du travail accompli par Amady..."</h3>
+                    <h4>Youba Sidibé</h4>
+                </div>
+                <div class="item">
+                    <h3>"Merci pour ton professionnalisme... Je n'hésiterai pas à te recontacter!"</h3>
+                    <h4>Aboubacar Cissoko</h4>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev" role="button">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next" role="button">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
         </div>
     </div>
-</div>
+</section>
 
 <script>
 </script>
