@@ -21,7 +21,7 @@ class ContactController extends Controller
 
         $mailable = new ContactMessageCreated($message);
         Mail::to('nibonx75@yahoo.fr')->send($mailable);
-        flashy('Votre message a bien été envoyé');
+        flashy('Votre message a bien été envoyé, sera traité sous 48h');
         return redirect()->route('home');
     }
 }
