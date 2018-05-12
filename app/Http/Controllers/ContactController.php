@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Contact;
 use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMessageCreated;
-use Illuminate\Mail\Message;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
