@@ -27,7 +27,8 @@ class DevisRequest extends FormRequest
             'code_postal'      => 'required|numeric',
             'type_appartement' => 'required',
             'prestations'      => 'required',
-            'surface'          => 'required'
+            'surface'          => 'required|numeric',
+            'message'          => 'nullable|min:10|max:300'
         ];
     }
 }
