@@ -12,7 +12,7 @@ class Devis extends Model
      * @var array
      */
     protected $fillable = [
-        'code_postal', 'type_appartement', 'nombre_pieces', 'prestations', 'message', 'surface'
+        'code_postal', 'type_appartement', 'prestations', 'message', 'surface', 'email', 'telephone'
     ];
 
     protected $table = 'devis';
