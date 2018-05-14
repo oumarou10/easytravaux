@@ -54,6 +54,18 @@
                             <span class="label label-danger">{{ $errors->first('surface') }}</span>
                         </div>
 
+                        <div class="form-group {{ $errors->has('telephone') ? 'has-error' : ''}}">
+                            <label for="telephone" class="control-label">Numéro de téléphone </label>
+                            <input type="text" class="form-control" id="email" name="telephone" value="{{ old('telephone')}}" placeholder="Entrez votre numéro de téléphone">
+                            <span class="label label-danger">{{ $errors->first('telephone') }}</span>
+                        </div>
+
+                        <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
+                            <label for="email" class="control-label">Adresse email*</label>
+                            <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }} "placeholder="Entrez votre nom">
+                            <span class="label label-danger">{{ $errors->first('email') }}</span>
+                        </div>
+
                         <div class="form-group {{ $errors->has('message') ? 'has-error' : ''}}">
                             <label for="message" class="control-label">N'hésitez pas à apporter des précisions </label>
                             <textarea class="form-control" name="message" rows="4"></textarea>
@@ -69,7 +81,7 @@
                 </div>
 
                 <div class="adresse col-md-4">
-                    <img width="100%" src="{{ asset('images/pic_peinture.jpg') }} ">
+                    <img width="100%" alt="image peinture" src="{{ asset('images/pic_peinture.jpg') }} ">
                 </div>
             </div>
         </section>
