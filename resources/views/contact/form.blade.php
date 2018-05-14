@@ -30,13 +30,13 @@
                             <span class="label label-danger">{{ $errors->first('name') }}</span>
                         </div>
 
-                        <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
+                        <div class="form-group {{ $errors->has('telephone') ? 'has-error' : ''}}">
                             <label for="telephone" class="control-label">Numéro de téléphone </label>
                             <input type="text" class="form-control" id="email" name="telephone" value="{{ old('telephone')}}" placeholder="Entrez votre numéro de téléphone">
                             <span class="label label-danger">{{ $errors->first('telephone') }}</span>
                         </div>
 
-                        <div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
+                        <div class="form-group {{ $errors->has('email') ? 'has-error' : ''}}">
                             <label for="email" class="control-label">Adresse email*</label>
                             <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }} "placeholder="Entrez votre nom">
                             <span class="label label-danger">{{ $errors->first('email') }}</span>
@@ -61,7 +61,8 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">Adresse</div>
                         <div class="panel-body">
-                            <p> 112, avenue lénine <br> 93380 Pierrefitte-sur-Seine</p>
+                            <p> 112, avenue lénine <br>
+                                93380 Pierrefitte-sur-Seine</p>
                             <p>
                                 Mail: <span class="glyphicon glyphicon-envelope"></span> <a href="mailto:amadicoulibaly67@gmail.com">amadicoulibaly67@gmail.com</a><br>
                                 Tél: <span class="glyphicon glyphicon-earphone"></span> 07 58 06 90 48
