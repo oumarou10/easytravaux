@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Devis;
 use App\Http\Requests\DevisRequest;
+use App\Mail\DevisMessegeCreated;
+use Illuminate\Support\Facades\Mail;
 
 class DevisController extends Controller
 {
@@ -23,8 +25,10 @@ class DevisController extends Controller
 
     public function store(DevisRequest $request)
     {
-        Devis::create($request->only('type_appartement', 'code_postal', 'prestations', 'surface', 'message'));
+        $devis = Devis::create($request->only('type_appartement', 'code_postal', 'prestations', 'surface', 'message', 'email','telephone'));
 
+        $mailable = new DevisMessegeCreated($devis);
+        Mail::to('nibonx75@yahoo.fr')->send($mailable);
         flashy('Votre devis a bien été envoyé, nous revenons vers vous dans les plus brefs délai');
         return redirect()->route('home');
     }
