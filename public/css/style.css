@@ -119,6 +119,12 @@ section .heading h2
     background-color: #fff !important;
 }
 
+@media (max-width: 768px) {
+    .navbar  {
+        padding-right:10px;
+    }
+}
+
 /******************************** RECOMMANDATIONS ********************************/
 
 #recommandations
