@@ -14,7 +14,7 @@ class DevisController extends Controller
         $items = ['Chambre', 'Cuisine', 'Salle de Bain', 'Salon', 'Autres'];
 
         $prestations = [
-            'Electricité', 'Fenêtres', 'Travaux de peinture',
+            'Fenêtres', 'Travaux de peinture',
             'Moquette-lino', 'Pose de papier peint',
             'Rénovation sol', 'Rénovation salle de bain',
             'Toutes types de rénovations sol - mur','Autres'
