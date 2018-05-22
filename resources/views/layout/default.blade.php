@@ -13,6 +13,7 @@
 
 <body>
 <div class="global">
+    @include('layout.infocookie')
     @include('layout.img')
     @include('layout._nav')
     @yield('content')
